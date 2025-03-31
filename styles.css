@@ -1,0 +1,186 @@
+/* Style the video: 100% width and height to cover the entire window */
+
+.hide{
+    display:none;
+}
+.video-container {
+    overflow: hidden;
+    display: flex;
+  }
+
+ .videoContainer{
+    overflow: hidden;
+    display: flex;
+   z-index: -1;
+ }
+  .video{
+     object-fit: contain;
+    }
+
+#restrictedSign {
+    position:absolute;
+    width: 35%;
+    height:35%;
+    z-index:1;
+    bottom: 25%;
+    left:33%;
+}
+#confirmStatus {
+    position:absolute;
+    width: 35%;
+    height:35%;
+    z-index:1;
+    bottom: 25%;
+    left:33%;
+}
+
+.pushable {
+    background: hsl(340deg 100% 32%);
+    border-radius: 12px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+  }
+  .front {
+    position:absolute;
+    z-index:4;
+    bottom: 5%;
+    left:40%;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    font-family: "Lucida Console", "Courier New", monospace;
+    background: hsl(50, 97%, 46%);
+    color: green;
+    transform: translateY(-6px);
+  }
+  .front:hover {
+    position:absolute;
+    z-index:4;
+    bottom: 5.5%;
+    left:40%;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    font-family: "Lucida Console", "Courier New", monospace;
+    background: hsl(50, 97%, 46%);
+    color: green;
+    transform: translateY(-6px);
+  }
+
+  .pushable:active .front {
+    transform: translateY(-2px);
+  }
+
+  .container {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+
+#problem {
+    font-size: 2em;
+    margin-bottom: 20px;
+    position:absolute;
+    z-index:1;
+    bottom: 17%;
+    left:42%;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-size: 2.5rem;
+    color: green;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+#answer {
+    padding: 10px;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    position:absolute;
+    z-index:1;
+    bottom: 12%;
+    left:43%;
+    color:red;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+button:hover {
+    background-color: #3e8e41;
+}
+
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    }
+
+#volumeControl {
+    position:absolute;
+    z-index:11;
+    bottom: 5%;
+    left:95%;
+}
+
+#volumeControl:hover {
+    position:absolute;
+    bottom: 5.5%;
+    left:95%;
+}
+
+.socialLink {
+    position:absolute;
+    z-index:-1; 
+    opacity: 0;  
+}
+
+#dexscreener {
+    position:absolute;
+    bottom: 15%;
+    left:50%;
+}
+
+#dexscreener:hover {
+    position:absolute;
+    bottom: 16%;
+    left:50%;
+}
+
+#instagramLink {
+    position:absolute;
+    bottom: 15%;
+    left:55%;
+}
+
+#instagramLink:hover {
+    position:absolute;
+    bottom: 16%;
+    left:55%;
+}
+
+#xLink {
+    position:absolute;
+    bottom: 15%;
+    left:45%;
+}
+
+#xLink:hover {
+    position:absolute;
+    bottom: 16%;
+    left:45%;
+}

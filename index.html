@@ -1,29 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style> 
-div {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  animation-name: example;
-  animation-duration: 4s;
-}
-
-@keyframes example {
-  from {background-color: red;}
-  to {background-color: yellow;}
-}
-</style>
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
+  <div class="videoContainer">
+ <video autoplay muted loop id="menacingFellowVideo" class="video">
+  <source src="media/video/fatmenacingasianfella.mp4" type="video/mp4">
+</video>
+ <video id="fatchiggaseasonpromo" class="video hide">
+  <source src="media/video/fatchiggaseason.mp4" type="video/mp4">
+</video>
+</div>
 
-<h1>CSS Animation</h1>
+<div id="page1">
+    <img src="media/img/restricted.png" id="restrictedSign">
+    <button onclick="checkAnswer()" class="pushable" id="mainButton">
+        <span class="front">
+          CONFIRM FAT CHIGGA STATUS
+        </span>
+    </button>
+    <div id="problem"></div>
+    <input type="number" id="answer" placeholder="Don't be stupid CHIGGA">
+  </div>
 
-<div></div>
+  <a href="https://www.mexc.com/dex/trade?pair_ca=GHgbhNCsTdW3oqB2Zde4zvxhRhZr7Kjfdffv9yinzafh&chain_id=100000&token_ca=5SkgLR8nSZS7XwhhweFRHzKnQ3xaj4WAe8iRVGEnpump&base_token_ca=So11111111111111111111111111111111111111112" target="_blank">
+    <img src="media/img/dex-screener-seeklogo.png" id="dexscreener" width="50" height="50" class="socialLink" >
+  </a>
+  <a href="https://x.com/fatasianseason" target="_blank">
+    <img src="media/img/logo-black.png" id="xLink" width="50" height="50" class="socialLink" >
+  </a>
+  <a href="https://www.instagram.com/fatasianfella/" target="_blank">
+    <img src="media/img/Instagram_Glyph_Black.svg" id="instagramLink" width="50" height="50" class="socialLink" >
+  </a>
 
-<p><b>Note:</b> When an animation is finished, it goes back to its original style.</p>
-
+  <input type="image" src="media/img/volume_up.png" id="volumeControl" width="50" height="50" onclick="volumeClick()">
 </body>
+<script src="script.js"></script>
 </html>
-
