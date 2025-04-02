@@ -1,34 +1,5 @@
 let num1, num2, operator, correctAnswer;
 
-function generateProblem() {
-    num1 = Math.floor(Math.random() * 10) + 1; // Generate random number between 1 and 10
-    num2 = Math.floor(Math.random() * 10) + 1;
-    const operators = ['+', '-', '*']; // Add division later if needed
-    operator = operators[Math.floor(Math.random() * operators.length)];
-
-    // Update the problem display
-    document.getElementById('problem').innerHTML = `${num1} ${operator} ${num2} = ?`;
-
-    // Calculate the correct answer
-    switch (operator) {
-        case '+':
-            if(num1 == 9 && num2 == 10 || (num1 == 10 && num2 == 9)) {
-              correctAnswer = 21; 
-            } else {
-              correctAnswer = num1 + num2;
-            }
-            break;
-        case '-':
-            correctAnswer = num1 - num2;
-            break;
-        case '*':
-            correctAnswer = num1 * num2;
-            break;
-    }
-    document.getElementById('answer').value = ""; // Clear the input field
-    document.getElementById('result').textContent = ""; // Clear the result
-}
-
 function fadeOutWithTransition(element, duration) {
   element.style.transition = `opacity ${duration / 1000}s`;
   element.style.opacity = 0;
@@ -61,21 +32,16 @@ function fadeToNextPage() {
   document.getElementById('instagramLink').style.zIndex=11;
   document.getElementById('xLink').style.opacity=1;
   document.getElementById('xLink').style.zIndex=11;
+  document.getElementById('buyButton').style.opacity=1;
+  document.getElementById('buyButton').style.zIndex=11;
+  document.getElementById('contactAddress').style.opacity=1;
+  document.getElementById('contactAddress').style.zIndex=11;
 }
+  
 
-function checkAnswer() {
-      const userAnswer = parseInt(document.getElementById('answer').value);
-
-      if (userAnswer === correctAnswer) {
-        document.getElementById('mainButton').querySelector('span').textContent  = "ight certifed CHIGGA, get in";
-        setTimeout(fadeToNextPage, 1000);
-        setTimeout(document.getElementById("fatchiggaseasonpromo").play(),2000);
-      } else {
-        document.getElementById('mainButton').querySelector('span').textContent  = `you cooked CHIGGA, try again`;
-        document.getElementById('restrictedSign').src = `media/img/accessdenied.png`;
-        generateProblem();
-      }
-   
+function nextPage() {
+  setTimeout(fadeToNextPage, 500);
+  setTimeout(document.getElementById("fatchiggaseasonpromo").play(),2000);
 }
 
 const video = document.getElementById('fatchiggaseasonpromo');
@@ -94,5 +60,7 @@ function volumeClick() {
   }
 }
 
-// Generate the first problem on page load
-generateProblem();
+function copyContactAddress() {
+  navigator.clipboard.writeText("5SkgLR8nSZS7XwhhweFRHzKnQ3xaj4WAe8iRVGEnpump");
+  alert("CA address copied");
+}
