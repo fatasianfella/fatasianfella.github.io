@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<head>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
   <div class="videoContainer">
@@ -25,18 +25,29 @@
   </div>
 
   <a href="https://www.mexc.com/dex/trade?pair_ca=GHgbhNCsTdW3oqB2Zde4zvxhRhZr7Kjfdffv9yinzafh&chain_id=100000&token_ca=5SkgLR8nSZS7XwhhweFRHzKnQ3xaj4WAe8iRVGEnpump&base_token_ca=So11111111111111111111111111111111111111112" target="_blank">
-    <img src="media/img/dex-screener-seeklogo.png" id="dexscreener" width="75" height="75" class="socialLink" >
+    <img src="media/img/dex-screener-seeklogo.png" id="dexscreener" class="socialLink" >
   </a>
   <a href="https://x.com/fatasianseason" target="_blank">
-    <img src="media/img/x_logo.avif" id="xLink" width="75" height="75" class="socialLink" >
+    <img src="media/img/x_logo.avif" id="xLink"  class="socialLink" >
   </a>
   <a href="https://www.instagram.com/fatasianfella/" target="_blank">
-    <img src="media/img/ig_logo.jpg" id="instagramLink" width="75" height="75" class="socialLink" >
+    <img src="media/img/ig_logo.jpg" id="instagramLink" class="socialLink" >
   </a>
+  
+  <a class="button2" id="buyButton" onclick="clickBuyNowButton()">BUY NOW</a>
 
-  <a class="button2" id="buyButton" href="https://x.com/home" target="_blank">BUY NOW</a>
+  <div id="myModal" class="modal">
 
-  <input type="image" src="media/img/volume_up.png" id="volumeControl" width="75" height="75" onclick="volumeClick()">
+    <div class="modal-content">
+      <span class="close">×</span>
+      <video id="howtobuychga" class="video" controls>
+        <source src="media/video/howtobuychga.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+
+  <input type="image" src="media/img/volume_up.png" id="volumeControl" onclick="volumeClick()">
+  <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
